@@ -10,7 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const deleteBook = books.find((book) => book.id === parseInt(bookId));
     const index = books.findIndex((book) => book.id === parseInt(bookId));
     books.splice(index, 1);
-    const newBooks = { ...deleteBook };
-    res.status(200).json(newBooks);
+    res.status(200).json(books);
   }
 }
