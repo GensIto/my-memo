@@ -10,9 +10,9 @@ function BooksPage() {
   const deleteBook = async (bookId: any) => {
     const response = await fetch(`/api/books/${bookId}`, {
       method: "DELETE",
-    }).then((response) => response.json());
-    // console.log(response);
-    // const data = await response.json();
+    });
+    const data = await response.json();
+    console.log(data);
     fetchBooks();
     setTitle("");
     setPages("");
