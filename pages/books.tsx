@@ -13,10 +13,7 @@ function BooksPage() {
     });
     const data = await response.json();
     console.log(data);
-    fetchBooks();
-    setTitle("");
-    setPages("");
-    setLan("");
+    setBooks(data);
   };
 
   const fetchBooks = async () => {
